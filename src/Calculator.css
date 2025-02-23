@@ -1,0 +1,124 @@
+/* Center the calculator */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Container */
+.container {
+  text-align: center;
+}
+
+
+/* Calculator */
+.calculator {
+  width: 90%;
+  max-width: 320px;
+  background: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Display */
+.display {
+  width: 100%;
+  background: #222;
+  color: white;
+  font-size: 2rem;
+  padding: 15px;
+  text-align: right;
+  font-weight: bold;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 5px;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+/* Button Grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Buttons */
+button {
+  font-size: 1.5rem;
+  padding: 15px;
+  border: none;
+  background: #666;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #777;
+}
+
+/* Clear & Equal Buttons */
+button:nth-child(13) {
+  background: #ff4444;
+}
+
+button:nth-child(15) {
+  background: #4caf50;
+}
+
+/* History */
+.history {
+  background: #444;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.history h4 {
+  margin: 0;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.history ul {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0;
+}
+
+.history li {
+  padding: 5px;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #666;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .calculator {
+    width: 95%;
+    padding: 15px;
+  }
+  .display {
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+  button {
+    font-size: 1.2rem;
+    padding: 12px;
+  }
+}
